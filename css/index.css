@@ -1,0 +1,100 @@
+.container {
+  background: white;
+  -webkit-filter: contrast(10);
+  -moz-filter: contrast(10);
+  filter: contrast(10);
+  padding: 30px;
+  position: relative;
+  height: 100;
+}
+
+.checkpoint {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background: black;
+  position: relative;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.checkpoint:first-of-type {
+  margin-left: 30px;
+}
+
+.checkpoint:last-of-type {
+  margin-right: 30px;
+}
+
+.blob {
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: black;
+  position: absolute;
+  top: 30px;
+  margin: 0;
+  padding: 0;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.radial {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.outer {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background: white;
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes slide {
+  0% {left: 0px;}
+  100% {left: 200px;}
+}
+
+@-moz-keyframes slide {
+  0% {left: 0px;}
+  100% {left: 200px;}
+}
+
+@keyframes slide {
+  0% {left: 0px;}
+  100% {left: 200px;}
+}
+
+.inner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background: black;
+  position: absolute;
+  -webkit-animation: slide 1s ease-in-out 0s infinite alternate;
+  -moz-animation: slide 1s ease-in-out 0s infinite alternate;
+  animation: slide 1s ease-in-out 0s infinite alternate;
+}
+
+
